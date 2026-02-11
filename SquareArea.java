@@ -1,12 +1,12 @@
 package com.java.javacodingprograms.Overloading;
 import java.util.Scanner;
 
-public class CircleArea {
+public class SquareArea {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter radius: ");
-        double radius = scanner.nextDouble();
-        double area = Math.PI * radius * radius;
+        System.out.print("Enter side: ");
+        double side = scanner.nextDouble();
+        double area = side * side;
         System.out.println("Area: " + area);
     }
 }

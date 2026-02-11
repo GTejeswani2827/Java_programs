@@ -1,18 +1,16 @@
-package com.javacode.javacodingprograms.project;
+package com.java.javacodingprograms.Overloading;
 import java.util.Scanner;
 
 public class CompoundInterest {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter principal amount: ");
+        System.out.print("Enter principal: ");
         double principal = scanner.nextDouble();
-        System.out.print("Enter rate of interest: ");
+        System.out.print("Enter rate: ");
         double rate = scanner.nextDouble();
         System.out.print("Enter time: ");
-        int time = scanner.nextInt();
-        
-        double amount = principal * Math.pow(1 + rate / 100, time);
-        double interest = amount - principal;
-        System.out.println("Compound Interest: " + interest);
+        double time = scanner.nextDouble();
+        double ci = principal * Math.pow((1 + rate / 100), time);
+        System.out.println("Compound Interest: " + ci);
     }
 }

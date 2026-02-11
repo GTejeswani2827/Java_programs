@@ -1,13 +1,37 @@
-package com.java.javacodingprograms.Abstraction;
+package com.java.javacodingprograms.Inheritannce;
+class Vehicle {
+    String make;
+    String model;
+    int year;
+
+    void displayVehicle() {
+        System.out.println("Make: " + make);
+        System.out.println("Model: " + model);
+        System.out.println("Year: " + year);
+    }
+}
+
+class Car extends Vehicle {
+    String color;
+    int mileage;
+	public String name;
+
+    void displayCar() {
+        displayVehicle();
+        System.out.println("Color: " + color);
+        System.out.println("Mileage: " + mileage + " km/l");
+    }
+}
+
 public class MainVehicle {
     public static void main(String[] args) {
-        Vehicle v1 = new Car();
-        Vehicle v2 = new Motorcycle();
+        Car car = new Car();
+        car.make = "Toyota";
+        car.model = "Innova";
+        car.year = 2022;
+        car.color = "White";
+        car.mileage = 15;
 
-        v1.start();
-        v1.stop();
-
-        v2.start();
-        v2.stop();
+        car.displayCar();
     }
 }

@@ -1,13 +1,55 @@
-package com.java.javacodingprograms.Abstraction;
+package com.java.javacodingprograms.Inheritannce;
+class Animal {
+    String name;
+    int age;
+
+    void displayAnimal() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+
+class Dog extends Animal {
+    public static String type = null;
+	public static String type1;
+	String breed;
+    String color;
+
+    void displayDog() {
+        displayAnimal();
+        System.out.println("Breed: " + breed);
+        System.out.println("Color: " + color);
+    }
+}
+
+class Cat extends Animal {
+    String breed;
+    String color;
+	public String type;
+
+    void displayCat() {
+        displayAnimal();
+        System.out.println("Breed: " + breed);
+        System.out.println("Color: " + color);
+    }
+}
+
 public class MainAnimal {
     public static void main(String[] args) {
-        Animal a1 = new Dog();
-        Animal a2 = new Cat();
+        Dog d = new Dog();
+        d.name = "Bruno";
+        d.age = 3;
+        d.breed = "Labrador";
+        d.color = "Brown";
+        d.displayDog();
 
-        a1.eat();
-        a1.sleep();
+        System.out.println();
 
-        a2.eat();
-        a2.sleep();
+        Cat c = new Cat();
+        c.name = "Kitty";
+        c.age = 2;
+        c.breed = "Persian";
+        c.color = "White";
+        c.displayCat();
     }
 }
