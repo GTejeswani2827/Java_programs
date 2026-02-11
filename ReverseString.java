@@ -1,8 +1,11 @@
-package com.java.javacodingprograms.Strings;
+package com.java.javacodingprograms.Datatypes;
 public class ReverseString {
     public static void main(String[] args) {
-        String str = "Hello World";
-        StringBuilder sb = new StringBuilder(str);
-        System.out.println("Reversed String: " + sb.reverse());
+        String str = "Hello";
+        String rev = "";
+        for (int i = str.length() - 1; i >= 0; i--) {
+            rev += str.charAt(i);
+        }
+        System.out.println("Reversed: " + rev);
     }
 }

@@ -1,4 +1,4 @@
-package com.javacode.javacodingprograms.project;
+package com.java.javacodingprograms.Datatypes;
 import java.util.Arrays;
 
 public class SecondLargestSmallest {

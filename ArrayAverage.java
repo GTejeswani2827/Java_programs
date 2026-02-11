@@ -1,22 +1,12 @@
-package com.java.javacodingprograms.Overloading;
-import java.util.Scanner;
-
+package com.java.javacodingprograms.Datatypes;
 public class ArrayAverage {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter array size: ");
-        int size = scanner.nextInt();
-        double[] array = new double[size];
-        for (int i = 0; i < size; i++) {
-            System.out.print("Enter element " + (i + 1) + ": ");
-            array[i] = scanner.nextDouble();
+        int[] arr = {1, 2, 3, 4, 5};
+        int sum = 0;
+        for (int i : arr) {
+            sum += i;
         }
-        double sum = 0;
-        for (double num : array) {
-            sum += num;
-        }
-        double average = sum / size;
+        double average = (double) sum / arr.length;
         System.out.println("Average: " + average);
     }
 }
-
