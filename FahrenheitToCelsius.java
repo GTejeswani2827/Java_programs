@@ -1,12 +1,10 @@
-package com.java.javacodingprograms.Overloading;
-import java.util.Scanner;
-
+package com.java.javacodingprograms.statics;
 public class FahrenheitToCelsius {
+    public static double convert(double fahrenheit) {
+        return (fahrenheit - 32) * 5 / 9;
+    }
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter temperature in Fahrenheit: ");
-        double fahrenheit = scanner.nextDouble();
-        double celsius = (fahrenheit - 32) * 5 / 9;
-        System.out.println("Temperature in Celsius: " + celsius);
+        System.out.println("86°F in Celsius: " + FahrenheitToCelsius.convert(86));
     }
 }

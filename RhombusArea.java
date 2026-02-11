@@ -1,15 +1,10 @@
-package com.java.javacodingprograms.Overloading;
-import java.util.Scanner;
-
+package com.java.javacodingprograms.statics;
 public class RhombusArea {
+    public static double area(double diagonal1, double diagonal2) {
+        return 0.5 * diagonal1 * diagonal2;
+    }
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter diagonal1: ");
-        double diagonal1 = scanner.nextDouble();
-        System.out.print("Enter diagonal2: ");
-        double diagonal2 = scanner.nextDouble();
-        double area = 0.5 * diagonal1 * diagonal2;
-        System.out.println("Area: " + area);
+        System.out.println("Area of rhombus with diagonals 5 and 10: " + RhombusArea.area(5, 10));
     }
 }
-

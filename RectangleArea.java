@@ -1,14 +1,10 @@
-package com.java.javacodingprograms.Overloading;
-import java.util.Scanner;
-
+package com.java.javacodingprograms.statics;
 public class RectangleArea {
+    public static double area(double length, double width) {
+        return length * width;
+    }
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter length: ");
-        double length = scanner.nextDouble();
-        System.out.print("Enter width: ");
-        double width = scanner.nextDouble();
-        double area = length * width;
-        System.out.println("Area: " + area);
+        System.out.println("Area of rectangle with length 5 and width 10: " + RectangleArea.area(5, 10));
     }
 }

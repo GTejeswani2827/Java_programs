@@ -1,14 +1,10 @@
-package com.java.javacodingprograms.Overloading;
-import java.util.Scanner;
-
+package com.java.javacodingprograms.statics;
 public class PolygonArea {
+    public static double area(int n, double side) {
+        return (n * side * side) / (4 * Math.tan(Math.PI / n));
+    }
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter number of sides: ");
-        int n = scanner.nextInt();
-        System.out.print("Enter side length: ");
-        double s = scanner.nextDouble();
-        double area = (n * s * s) / (4 * Math.tan(Math.PI / n));
-        System.out.println("Area: " + area);
+        System.out.println("Area of regular hexagon with side 5: " + PolygonArea.area(6, 5));
     }
 }

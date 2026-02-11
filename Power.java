@@ -1,9 +1,10 @@
-package com.javacode.javacodingprograms.project;
+package com.java.javacodingprograms.statics;
 public class Power {
+    public static double power(double base, double exponent) {
+        return Math.pow(base, exponent);
+    }
+
     public static void main(String[] args) {
-        int base = 2;
-        int exponent = 3;
-        double result = Math.pow(base, exponent);
-        System.out.println(base + " raised to the power of " + exponent + ": " + result);
+        System.out.println("2^3: " + Power.power(2, 3));
     }
 }

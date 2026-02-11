@@ -1,14 +1,14 @@
-package com.javacode.javacodingprograms.project;
+package com.java.javacodingprograms.statics;
 public class FactorialRecursion {
-    public static void main(String[] args) {
-        int num = 5;
-        System.out.println("Factorial of " + num + ": " + factorial(num));
-    }
     public static int factorial(int n) {
-        if (n == 0 || n == 1) {
+        if (n == 0) {
             return 1;
         } else {
             return n * factorial(n - 1);
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Factorial of 5: " + FactorialRecursion.factorial(5));
     }
 }

@@ -1,16 +1,10 @@
-package com.java.javacodingprograms.Overloading;
-import java.util.Scanner;
-
+package com.java.javacodingprograms.statics;
 public class SimpleInterest {
+    public static double interest(double principal, double rate, double time) {
+        return (principal * rate * time) / 100;
+    }
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter principal: ");
-        double principal = scanner.nextDouble();
-        System.out.print("Enter rate: ");
-        double rate = scanner.nextDouble();
-        System.out.print("Enter time: ");
-        double time = scanner.nextDouble();
-        double si = (principal * rate * time) / 100;
-        System.out.println("Simple Interest: " + si);
+        System.out.println("Simple interest: " + SimpleInterest.interest(1000, 5, 2));
     }
 }

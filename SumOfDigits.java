@@ -1,14 +1,14 @@
-package com.javacode.javacodingprograms.project;
+package com.java.javacodingprograms.statics;
 public class SumOfDigits {
-    public static void main(String[] args) {
-        int num = 123;
-        int sum = 0;
-        while (num > 0) {
-            sum += num % 10;
-            num /= 10;
+    public static int sum(int n) {
+        if (n == 0) {
+            return 0;
+        } else {
+            return n % 10 + sum(n / 10);
         }
-        System.out.println("Sum of digits: " + sum);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Sum of digits of 12345: " + SumOfDigits.sum(12345));
     }
 }
-
-

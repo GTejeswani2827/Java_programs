@@ -1,21 +1,14 @@
-package com.javacode.javacodingprograms.project;
-import java.util.Scanner;
-
+package com.java.javacodingprograms.statics;
 public class PowerRecursion {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter base: ");
-        int base = scanner.nextInt();
-        System.out.print("Enter exponent: ");
-        int exponent = scanner.nextInt();
-        System.out.println("Result: " + power(base, exponent));
-    }
-    
     public static int power(int base, int exponent) {
         if (exponent == 0) {
             return 1;
         } else {
             return base * power(base, exponent - 1);
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println("2^3: " + PowerRecursion.power(2, 3));
     }
 }

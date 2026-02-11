@@ -1,12 +1,10 @@
-package com.java.javacodingprograms.Overloading;
-import java.util.Scanner;
-
+package com.java.javacodingprograms.statics;
 public class SquareArea {
+    public static double area(double side) {
+        return side * side;
+    }
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter side: ");
-        double side = scanner.nextDouble();
-        double area = side * side;
-        System.out.println("Area: " + area);
+        System.out.println("Area of square with side 5: " + SquareArea.area(5));
     }
 }

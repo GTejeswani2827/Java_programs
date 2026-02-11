@@ -1,12 +1,10 @@
-package com.java.javacodingprograms.Overloading;
-import java.util.Scanner;
-
+package com.java.javacodingprograms.statics;
 public class SquareRoot {
+    public static double sqrt(double num) {
+        return Math.sqrt(num);
+    }
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a number: ");
-        double num = scanner.nextDouble();
-        double sqrt = Math.sqrt(num);
-        System.out.println("Square Root: " + sqrt);
+        System.out.println("Square root of 16: " + SquareRoot.sqrt(16));
     }
 }

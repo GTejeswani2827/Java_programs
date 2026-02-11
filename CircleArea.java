@@ -1,12 +1,10 @@
-package com.java.javacodingprograms.Overloading;
-import java.util.Scanner;
-
+package com.java.javacodingprograms.statics;
 public class CircleArea {
+    public static double area(double radius) {
+        return Math.PI * radius * radius;
+    }
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter radius: ");
-        double radius = scanner.nextDouble();
-        double area = Math.PI * radius * radius;
-        System.out.println("Area: " + area);
+        System.out.println("Area of circle with radius 5: " + CircleArea.area(5));
     }
 }

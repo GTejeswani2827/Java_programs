@@ -1,16 +1,10 @@
-package com.java.javacodingprograms.Overloading;
-import java.util.Scanner;
-
+package com.java.javacodingprograms.statics;
 public class TrapezoidArea {
+    public static double area(double base1, double base2, double height) {
+        return 0.5 * (base1 + base2) * height;
+    }
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter base1: ");
-        double base1 = scanner.nextDouble();
-        System.out.print("Enter base2: ");
-        double base2 = scanner.nextDouble();
-        System.out.print("Enter height: ");
-        double height = scanner.nextDouble();
-        double area = 0.5 * (base1 + base2) * height;
-        System.out.println("Area: " + area);
+        System.out.println("Area of trapezoid with bases 5 and 10, and height 5: " + TrapezoidArea.area(5, 10, 5));
     }
 }
